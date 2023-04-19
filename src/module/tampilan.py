@@ -1,30 +1,17 @@
-"""
-This module provide functionality that are related to display/print some stuff.
-"""
-
 from tabulate import tabulate
 
 def show_welcome_menu():
-    """
-    This function shows the initial welcome greeting menu on the self service cashier program.
-    """
-    
-    print("---------- WELCOME TO YOUKOSO JAPARI STORE ----------")
-    print("-----            SELF CASHIER SYSTEM            -----")
-    print("-----------------------------------------------------")
+    print("========== Selamat Datang Di Toko Si Paling Modern ==========")
+    print("=====            SELF CASHIER SYSTEM            =====")
     print("\n Main Menu")
     print("------------")
-    print("Do you already have an account?")
+    print("Sudah memiliki akun?")
     print("1. Login \n2. Register")
-    print("-----------------------------------------------------")
+    print("======================================================")
 
 def show_transaction_menu():
-    """
-    This function shows menu for the transaction related stuffs.
-    """
-
-    print("------------------------------------------------------")
-    print("Apa yang ingin kamu lakukan? silahkan pilih menu di bawah.")
+    print("======================================================")
+    print("Silahkan pilih menu dibawah ini")
     print("1. Masukkan barang yang ingin dibeli")
     print("2. Perbarui daftar barang")
     print("3. Hapus barang dari keranjang")
@@ -33,12 +20,9 @@ def show_transaction_menu():
     print("6. Check out pesanan")
     print("7. Lihat pesanan yang telah di-check out")
     print("8. Keluar dari program")
-    print("------------------------------------------------------")
+    print("\n")
 
 def show_order(order: dict):
-    """
-    This function shows user's transaction detail.
-    """
     table = []
     for item_name, item_info in order.items():
         qty = int(item_info["qty"])
@@ -51,9 +35,6 @@ def show_order(order: dict):
     print(tabulate(table, headers = headers, tablefmt="grid"))
 
 def show_checkout_order(order: dict):
-    """
-    This function shows user's transaction detail with addition of discount after user did check out.
-    """
     table = []
     for item_name, item_info in order.items():
         qty = int(item_info["qty"])

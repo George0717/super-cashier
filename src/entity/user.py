@@ -1,23 +1,9 @@
-"""
-This file contain Class for User to store email, name, and password.
-"""
-
 from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import String
 from ..database.base import Base
 
 class User(Base):
-    """
-    A class for storing user information, including email, name, and password.
-
-    Attributes:
-        id (int): The unique identifier for the user.
-        name (str): The name of the user.
-        email (str): The email address of the user.
-        password (str): The password for the user's account.
-    """
-
     __tablename__ = "user_account"
 
     id = Column(Integer, primary_key=True)

@@ -1,5 +1,5 @@
 from src.database.conn import get_db
-from src.module.display import *
+from src.module.tampilan import *
 from src.module.authentication import *
 from src.module.transaction import *
 
@@ -45,9 +45,8 @@ def main():
             if menu_choice == "1":
                 # Add item
                 while True:
-                    print("-----------------------------------------------------")
+                    print("======================================================")
                     order = add_item(order)
-
                     show_order(order)
                     print("")
                     input_again = input("Mau menambahkan lagi? (y/n) \n> ")
@@ -58,12 +57,9 @@ def main():
             elif menu_choice == "2":
                 # Update item
                 show_order(order)
-
                 print("Order mana yang ingin diubah? ")
                 while True:
-                    item_name = input(
-                        "Nama barang yang ingin diubah? (masukkan nama atau masukkan 'x' untuk membatalkan): \n> ")
-
+                    item_name = input("Nama barang yang ingin diubah? (masukkan nama atau masukkan 'x' untuk membatalkan): \n> ")
                     if item_name.lower() == "x" and item_name.upper() == "X":
                         # Cancel and return to main menu
                         break
@@ -93,7 +89,6 @@ def main():
                                             order, item_name, new_name, qty)
                                 except ValueError:
                                     print("Input tidak valid. Masukkan angka.")
-
                             # Check if price needs to be updated
                             if new_price != "":
                                 try:
@@ -104,7 +99,6 @@ def main():
                                         update_item_price(order, item_name, new_name, price)
                                 except ValueError:
                                     print("Input tidak valid. Masukkan angka.")
-
                             print("Order Anda setelah diperbarui: ")
                             show_order(order)
                             break
@@ -149,7 +143,7 @@ def main():
             elif menu_choice == "7":
                 print("Rincian barang-barang yang telah Anda Checkout: ")
                 check_transaction_checkout(db, current_user.id)
-                print("Silahkan bayar pada BNI 00000045xxxx sesuai harga tertera ")
+                print("Silahkan melakukan pembayaran pada platform yang sudah tertera")
             elif menu_choice == "8":
                 print("Terima kasih telah menggunakan aplikasi ini")
                 break
