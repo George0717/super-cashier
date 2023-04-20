@@ -6,7 +6,7 @@
 2. Transaction test
     - Pengguna Menambahkan barang
 
-        ![](pilihan1.png)![](pilihan1.png)
+        ![](pilihan1.png)
 
     - Pengguna bisa mengubah barang
        - Hanya untuk contoh ini hanya mengubah Qty(jumlah barang)
