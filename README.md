@@ -32,7 +32,9 @@ To fulfill Andi's request, here are some objective I decided the program works:
 
 ## Flowchart
 
-![](flowchart.png)
+![](Gambar1.png)
+![](Gambar2.png)
+![](Gambar3.png)
 
 ## How to Use
 ```

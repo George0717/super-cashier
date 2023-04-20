@@ -40,7 +40,7 @@ def main():
 
         # Display transaction menu
         show_transaction_menu()
-        menu_choice = input("Pilihan menu (1-7) \n> ")
+        menu_choice = input("Pilihan menu (1-8) \n> ")
         try:
             if menu_choice == "1":
                 # Add item
@@ -148,7 +148,7 @@ def main():
                 print("Terima kasih telah menggunakan aplikasi ini")
                 break
             else:
-                raise ValueError("Menu tidak tersedia. Silahkan masukkan : 1-7")
+                raise ValueError("Menu tidak tersedia. Silahkan masukkan : 1-8")
         except Exception as e:
             print(f"ERROR: Terjadi kesalahan: {e}. \n")
 
