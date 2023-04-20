@@ -29,7 +29,7 @@ def main():
             else:
                 raise ValueError("Input Anda salah, silahkan pilih antara Login(1) atau Register(2).")
         except Exception as e:
-            print(f"--- ERROR: {e}")
+            print(f"ERROR: {e}")
 
     # Create empty dictionary to store order temporarily
     order = {}
@@ -137,7 +137,7 @@ def main():
                 # Display transaction's total
                 print(" Rincian belanja Anda setelah diskon: ")
                 show_checkout_order(order)
-
+                
                 # Insert transaction to database
                 insert_to_database(db, order, current_user.id)
             elif menu_choice == "7":
